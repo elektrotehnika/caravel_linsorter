@@ -1,0 +1,3 @@
+[submodule "cargo/lis"]
+	path = cargo/lis
+	url = https://github.com/milovanovic/lis
