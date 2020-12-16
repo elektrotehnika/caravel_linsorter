@@ -27,3 +27,10 @@ test_top:
 clean_top:
 	cd $(TOP_TEST_PATH); make clean; cd -;
 	
+check-env:
+ifndef PDK_ROOT
+	$(error PDK_ROOT is undefined, please export it before running make)
+endif
+ifndef RISCV32
+	$(error RISCV32 is undefined, please export it before running make)
+endif
