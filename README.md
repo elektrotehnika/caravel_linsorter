@@ -15,6 +15,14 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 -->
+# LINSORTER - LinearINsertion SORTER   
+
+LinearINsertion SORTER contains a couple of instances of linear insertion sorter accelerator produced by [Chisel](https://www.chisel-lang.org/) generator and attached to Caravel. Block diagram of the LINSORTER is given below and detailed explanation can be found inside [cargo](https://github.com/elektrotehnika/caravel_linsorter/tree/master/cargo]) directory.
+
+![Global block scheme of the LINSORTER](./cargo/doc/images/LISTest.svg)
+
+The original Caravel documentation follows:
+
 # CIIC Harness  
 
 A template SoC for Google SKY130 free shuttles. It is still WIP. The current SoC architecture is given below.
