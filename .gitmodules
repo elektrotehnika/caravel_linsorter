@@ -1,0 +1,7 @@
+[submodule "cargo/wb2axip"]
+	path = cargo/wb2axip
+	url = https://github.com/milovanovic/wb2axip.git
+[submodule "cargo/lis"]
+	path = cargo/lis
+	url = https://github.com/milovanovic/lis.git
+	branch = lisTest
