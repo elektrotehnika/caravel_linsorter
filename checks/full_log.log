@@ -1,0 +1,63 @@
+FULL RUN LOG:
+ Uncompressing the gds files
+Step 0 done without fatal errors.
+ Executing Step 1 of 4: Checking License files.
+{{LICENSE COMPLIANCE PASSED}} Apache-2.0 LICENSE file was found in project root
+ No third party libraries found.
+Step 1 done without fatal errors.
+{{SPDX COMPLIANCE WARNING}} Found 454 non-compliant files with the SPDX Standard. Check full log for more information
+SPDX COMPLIANCE: NON-COMPLIANT FILES PREVIEW: ['/home/baywatcher/projects/test/linsorter/.gitmodules', '/home/baywatcher/projects/test/linsorter/cargo/Makefile', '/home/baywatcher/projects/test/linsorter/cargo/lis/.git', '/home/baywatcher/projects/test/linsorter/cargo/lis/.install_verilator.sh', '/home/baywatcher/projects/test/linsorter/cargo/lis/.travis.yml', '/home/baywatcher/projects/test/linsorter/cargo/lis/build.sbt', '/home/baywatcher/projects/test/linsorter/cargo/lis/doc/images/insertionCases.svg', '/home/baywatcher/projects/test/linsorter/cargo/lis/project/plugins.sbt', '/home/baywatcher/projects/test/linsorter/cargo/lis/rtl/LISTest/LISTest.v', '/home/baywatcher/projects/test/linsorter/cargo/lis/rtl/LISTest/plusarg_reader.v', '/home/baywatcher/projects/test/linsorter/cargo/lis/rtl/LISTestWithLA/LISTestWithLA.v', '/home/baywatcher/projects/test/linsorter/cargo/lis/rtl/LISTestWithLA/plusarg_reader.v', '/home/baywatcher/projects/test/linsorter/cargo/lis/src/main/scala/AXI4StreamBIST.scala', '/home/baywatcher/projects/test/linsorter/cargo/lis/src/main/scala/ControlLogic.scala', '/home/baywatcher/projects/test/linsorter/cargo/lis/src/main/scala/LISDspBlock.scala', '/home/baywatcher/projects/test/linsorter/cargo/lis/src/main/scala/LISTest.scala', '/home/baywatcher/projects/test/linsorter/cargo/lis/src/main/scala/LISTestWithLA.scala', '/home/baywatcher/projects/test/linsorter/cargo/lis/src/main/scala/LISutil.scala', '/home/baywatcher/projects/test/linsorter/cargo/lis/src/main/scala/LinearSorter.scala', '/home/baywatcher/projects/test/linsorter/cargo/lis/src/main/scala/PE.scala']
+ Executing Step 2 of 4: Checking YAML description.
+ YAML file valid!
+Step 2 done without fatal errors.
+ Executing Step 3 of 4: Executing Fuzzy Consistency Checks.
+b'Going into /home/baywatcher/projects/test/linsorter/verilog/rtl'
+b'Removing manifest'
+b'Fetching manifest'
+b'Running sha1sum checks'
+b'Going into /home/baywatcher/projects/test/linsorter/maglef'
+b'Removing manifest'
+b'Fetching manifest'
+b'Running sha1sum checks'
+b'Going into /home/baywatcher/projects/test/linsorter/mag'
+b'Removing manifest'
+b'Fetching manifest'
+b'Running sha1sum checks'
+ Manifest Checks Failed. Please rebase your Repository to the latest Caravel master.
+.magicrc: FAILED
+ Documentation Checks Passed.
+ Makefile Checks Passed.
+instance caravel found
+instance user_project_wrapper found
+Design is complex and contains: 47 modules
+Design is complex and contains: 917510 modules
+verilog Consistency Checks Passed.
+ Basic Hierarchy Checks Passed.
+ Running Magic Extractions From GDS...
+user wrapper cell names differences: 
+[]
+user wrapper cell type differences: 
+[]
+toplevel cell names differences: 
+[]
+toplevel cell type differences: 
+[]
+GDS Hierarchy Check Passed
+GDS Checks Passed
+{PROGRESS} Running Pins and Power Checks...
+Pins check passed
+Internal Power Checks Passed!
+ Fuzzy Consistency Checks Passed!
+Step 3 done without fatal errors.
+ Executing Step 4 of 4: Checking DRC Violations.
+ Running DRC Checks...
+Violation Message "Metal4 > 3um spacing to unrelated m4 < 0.4um (met4.5b) "found 2 Times.
+Violation Message "Metal3 > 3um spacing to unrelated m3 < 0.4um (met3.3d) "found 2 Times.
+Violation Message "Can't overlap those layers "found 2 Times.
+Violation Message "Min area of metal2 holes > 0.14um^2 (met2.7) "found 20 Times.
+Violation Message "Metal3 spacing < 0.3um (met3.2) "found 6 Times.
+Violation Message "Metal3 width < 0.3um (met3.1) "found 1 Times.
+Violation Message "Metal1 > 3um spacing to unrelated m1 < 0.28um (met1.3b) "found 17 Times.
+Violation Message "Metal2 > 3um spacing to unrelated m2 < 0.28um (met2.3b) "found 21 Times.
+ DRC Checks on MAG Failed, Reason: Total # of DRC violations is 71
+TEST FAILED AT STEP 4
