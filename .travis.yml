@@ -36,4 +36,4 @@ install:
   - sh .travisCI/travisBuild.sh
 
 script:
-  - bash .travisCI/runPrecheck.sh
+  - travis_wait 40 bash .travisCI/runPrecheck.sh

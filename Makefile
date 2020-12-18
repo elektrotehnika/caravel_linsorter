@@ -52,7 +52,7 @@ clean:
 
 .PHONY: verify
 verify:
-	echo "verify"
+	cd cargo; make check-env; make test_top; cd - ;
 
 
 
