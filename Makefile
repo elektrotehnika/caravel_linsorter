@@ -19,9 +19,9 @@ FILE_SIZE_LIMIT_MB = 100
 LARGE_FILES := $(shell find ./gds -type f -name "*.gds")
 LARGE_FILES += $(shell find . -type f -size +$(FILE_SIZE_LIMIT_MB)M -not -path "./.git/*" -not -path "./gds/*" -not -path "./openlane/*")
 
-LARGE_FILES_GZ := $(addsuffix .gz, $(LARGE_FILES))
+LARGE_FILES_XZ := $(addsuffix .xz, $(LARGE_FILES))
 
-ARCHIVES := $(shell find . -type f -name "*.gz")
+ARCHIVES := $(shell find . -type f -name "*.xz")
 ARCHIVE_SOURCES := $(basename $(ARCHIVES))
 
 # PDK setup configs
@@ -56,21 +56,21 @@ verify:
 
 
 
-$(LARGE_FILES_GZ): %.gz: %
-	@if ! [ $(suffix $<) == ".gz" ]; then\
-		gzip -n --best $< > /dev/null &&\
+$(LARGE_FILES_XZ): %.xz: %
+	@if ! [ $(suffix $<) == ".xz" ]; then\
+		xz -9 -T0 $< > /dev/null &&\
 		echo "$< -> $@";\
 	fi
 
 # This target compresses all files larger than $(FILE_SIZE_LIMIT_MB) MB
 .PHONY: compress
-compress: $(LARGE_FILES_GZ)
+compress: $(LARGE_FILES_XZ)
 	@echo "Files larger than $(FILE_SIZE_LIMIT_MB) MBytes are compressed!"
 
 
 
-$(ARCHIVE_SOURCES): %: %.gz
-	@gzip -d $< &&\
+$(ARCHIVE_SOURCES): %: %.xz
+	@xz -9 -T0 -d $< &&\
 	echo "$< -> $@";\
 
 .PHONY: uncompress
