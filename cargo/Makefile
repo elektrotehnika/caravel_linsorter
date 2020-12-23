@@ -19,8 +19,6 @@ test_lis:
 .PHONY: test_top
 test_top:
 	make move_user_proj_example
-	make verilog_lis
-	make test_lis
 	cd $(TOP_TEST_PATH); make all; cd -;
 	make move_back_user_proj_example
 
