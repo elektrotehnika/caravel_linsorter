@@ -24,6 +24,13 @@ test_top:
 	cd $(TOP_TEST_PATH); make all; cd -;
 	make move_back_user_proj_example
 
+run_all:
+	make move_user_proj_example
+	make verilog_lis
+	make test_lis
+	cd $(TOP_TEST_PATH); make all; cd -;
+	make move_back_user_proj_example
+	
 clean_top:
 	cd $(TOP_TEST_PATH); make clean; cd -;
 	
